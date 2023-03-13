@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package org.example.grpc;
+
+message MyRequest {
+  string requestText = 1;
+}
+
+message MyResponse {
+  string responseText = 1;
+}
+
+service MyService {
+  rpc printMyResponse(MyRequest) returns (MyResponse);
+}
+
